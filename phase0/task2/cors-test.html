@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>CORS test</title></head>
+<body>
+  <h1>CORS test</h1>
+  <script>
+    async function test() {
+      try {
+        const response = await fetch("http://localhost:3000/api/expenses");
+        console.log(await response.json());
+      } catch (err) {
+        console.error("Request failed:", err);
+      }
+    }
+    test();
+  </script>
+</body>
+</html>
